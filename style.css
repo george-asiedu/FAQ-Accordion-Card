@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    --Ver-dark-grayish-blue: hsl(237, 12%, 33%);
+    --Dark-grayish-blue: hsl(240, 6%, 50%);
+    --Light-grayish-blue: hsl(240, 5%, 91%);
+    --Soft-violet: hsl(273, 75%, 66%);
+    --Soft-blue: hsl(240, 73%, 65%);
+    --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --Soft-red: hsl(14, 88%, 65%);
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 75%;
+    overflow-x: hidden;
+    background-image: linear-gradient(var(--Soft-violet) , var(--Soft-blue));
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 65%;
+    background: var(--white);
+    display: flex;
+    border-radius: 20px;
+}
+
+.faq {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    padding: 3% 5% 5% 0%;
+    width: 50%;
+}
+
+.faq .title {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.text {
+    border-bottom: 1px solid var(--Light-grayish-blue);
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6%;
+    margin-bottom: 2%;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: var(--white);
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+button:hover {
+    color: var(--Soft-red);
+}
+
+.images {
+    width: 50%;
+    padding-bottom: 2%;
+    position: relative;
+}
+
+.illustration {
+    width: 100%;
+    height: 100%;
+    background-image: url(images/illustration-woman-online-desktop.svg);
+    background-repeat: no-repeat;
+    background-position-x: -60px;
+    background-position-y: 80px;
+    background-size: 85%;
+    position: absolute;
+    z-index: 1;
+}
+
+.illustration img {
+    position: absolute;
+    top: 40%;
+    left: -21%;
+}
+
+.online {
+    width: 100%;
+    height: 100%;
+    background-image: url(images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 195%;
+    background-position-y: -200px;
+    background-position-x: -575px;
+    position: absolute;
+}
+
+.online img,
+.bg-pattern img {
+    display: none;
+}
+
+.arrowImg {
+    transform: rotate(180deg);
+} 
+
+.bold {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.boldText {
+    font-weight: 700;
+}
+
+.answer {
+    visibility: hidden;
+}
+
+@media (max-width: 1440px) {
+    .illustration {
+        background-size: 102%;
+    }
+
+    .online {
+        background-size: 190%;
+        background-position-y: -200px;
+        background-position-x: -460px;
+    }
+
+    .illustration img {
+        top: 40%;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .faq{
+        margin-top: 30%;
+        margin-bottom: 15%;
+        width: 87%;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .bold {
+        font-size: .8rem;
+    }
+
+    .illustration img {
+        display: none;
+    }
+
+    .illustration {
+        background-image: none;
+    }
+
+    .online img {
+        display: inline-block;
+        position: absolute;
+        top: -80px;
+        right: -10%;
+    }
+
+    .bg-pattern img {
+        display: inline-block;
+        position: absolute;
+        right: -30%;
+        top: -25px;
+    }
+}
